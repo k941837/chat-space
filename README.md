@@ -4,24 +4,30 @@
 |------|----|------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null:false|
+|name|string|null:false|
 ### Association
-- has_many :posts
+- has_many :messages
 - has_many :groups
 
-## postテーブル
-|text|text|null: false|
-|image|text|null: false|
+## messagesテーブル
+|text|text|
+|image|text|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belong_to :user
+- belong_to :groups
 
-## group テーブル
-|groupname|text|null: false|
-|username|text|null: false|
+## groups テーブル
+|name|text|null: false|
 ### Association
-- belong_to :user
+- has_many :users
 
+## users_groupsテーブル
+|users|references|null:false, fereign_key:true|
+|groups|references|null:false, fereign_key:true|
+### Association
+- belong_to :users
+- belong_to :groups
 
 
 
