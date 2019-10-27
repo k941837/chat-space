@@ -1,0 +1,143 @@
+.header {
+  height:26px;
+  background-color: #38AEF0;
+  color: white;
+  text-align: center;
+}
+.chat{
+  display: flex;
+  &_sidebar {
+    height: calc(100vh - 20px);
+    width: 300px;
+    color: white;
+    &_top {
+      background-color: #253141;
+      font-size: 16px;
+      font-weight: bold;
+      height: 100px;
+      line-height: 90px;
+      
+      &_user-name {
+        padding: 0px 20px;
+      &_icon {
+        
+        &_message {
+          
+        }
+        &_edit {
+        
+        }
+      }  
+      }    
+    }
+    &_contents {
+      height: calc(100vh - 120px);
+      background-color: #2f3e51;
+      &_group {
+        height: 71px;
+        &_name {
+          font-size: 15px;
+          padding: 20px 20px 5px 20px;
+          
+        }
+        &_message {
+          font-size: 11px;
+          padding: 0px 20px 40px 20px;
+          
+        }
+      }
+    }
+  }
+
+  &_main {
+    width: calc(100vw - 300px);
+    float: right;
+    height:643px;
+    &_top {
+      height: 100px;
+      display: flex;
+      &_group {
+
+        &_group-name{
+          font-size:20px;
+          color:#333333;
+          padding: 35px 0px 15px 40px;
+        }
+        &_username{
+          font-size:12px;
+          color: #999999;
+          padding-left: 40px;
+        }
+      }
+      &_edit-btn{
+        border: 1px solid #38AEF0;
+        color: #38AEF0;
+        padding:5px 20px;
+        display:inline-block;
+        position: absolute;
+        top: 55px;
+        right: 40px;
+      }
+    }
+
+    &_contents {
+      background-color: #eeeeee;
+      height: 452px;
+      &_message {
+        &_username {
+          font-size: 16px;
+          font-weight: bold;
+          color: #434A54;
+          padding: 46px 0 10px 40px;
+        }
+        &_message-box {
+          font-size: 14px;
+          color: #434A54;
+          padding: 10px 0 0px 40px;
+        }
+      }
+    }
+    &_form {
+      background-color: lightgray;
+      height: 90px;
+      &_message{
+        display: block;
+        background-color: white;
+        height: 50px;
+        width: 550px;
+        position: absolute;
+        bottom: 14px;
+        right: 160px;
+        color: gray;
+        line-height: 50px;
+        padding-left:20px;
+      }
+      &_send-btn {
+        background-color: #38AEF0;
+        height: 50px;
+        width: 90px;
+        position: absolute;
+        right: 40px;
+        bottom: 14px;
+        display:block;
+        color: white;
+        text-align:center;
+        line-height: 50px;
+      }
+    }
+    
+
+  }
+
+}
+
+.fas.fa-cog{
+  position:absolute;
+  top:70px;
+  left:270px;
+}
+.far.fa-edit{
+  position:absolute;
+  top: 70px;
+  left: 240px;
+}
