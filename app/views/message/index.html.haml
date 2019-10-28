@@ -1,0 +1,44 @@
+.header
+  グループを作成しました。
+.chat  
+  .chat_sidebar
+    .chat_sidebar_top
+      .chat_sidebar_top_user-name
+        名前
+      .chat_sidebar_top_icon
+        .chat_sidebar_top_icon_message
+          =fa_icon "edit"
+        .chat_sidebar_top_icon_edit
+          =fa_icon "cog"
+    .chat_sidebar_contents
+      .chat_sidebar_contents_group
+        = render "layouts/sample"
+        = render "layouts/sample"
+        = render "layouts/sample"
+        = render "layouts/sample"
+          
+  .chat_main
+    .chat_main_top
+      .chat_main_top_group
+        .chat_main_top_group_group-name
+          グループ名
+        .chat_main_top_group_username
+          Member : 名前
+      .chat_main_top_edit-btn
+        EDIT
+
+    .chat_main_contents
+      .chat_main_contents_message
+        = render "layouts/menu"
+        = render "layouts/menu"
+        = render "layouts/menu"
+        = render "layouts/menu"
+        = render "layouts/menu"
+
+    .chat_main_form
+      .chat_main_form_message
+        type  a  message
+        =fa_icon "images"
+        .chat_main_form_message_icon
+      .chat_main_form_send-btn     
+        Send       
