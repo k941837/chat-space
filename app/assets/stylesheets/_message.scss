@@ -19,22 +19,13 @@
       
       &_user-name {
         padding: 0px 20px;
-      &_icon {
-        
-        &_message {
-          
-        }
-        &_edit {
-        
-        }
-      }  
       }    
     }
     &_contents {
-      height: calc(100vh - 120px);
+      height: calc(100vh - 126px);
       background-color: #2f3e51;
       &_group {
-        height: 71px;
+        height: 90px;
         &_name {
           font-size: 15px;
           padding: 20px 20px 5px 20px;
@@ -52,7 +43,7 @@
   &_main {
     width: calc(100vw - 300px);
     float: right;
-    height:643px;
+    height: calc(100vh - 20px);
     &_top {
       height: 100px;
       display: flex;
@@ -82,47 +73,64 @@
 
     &_contents {
       background-color: #eeeeee;
-      height: 452px;
+      height: calc(100vh - 100px - 90px - 26px);
       &_message {
-        &_username {
-          font-size: 16px;
-          font-weight: bold;
-          color: #434A54;
-          padding: 46px 0 10px 40px;
-        }
+        &_A {
+          display:flex;
+          height:70px;
+
+          }  
+          &_username {
+            font-size: 16px;
+            font-weight: bold;
+            color: #434A54;
+            padding: 46px 0 0px 40px;
+            width:60px;
+          }
+          &_time {
+            color: #999999;
+            font-size: 12px;
+            float: right;
+            line-height: 120px;
+            width: 200px;
+          
+        }   
         &_message-box {
           font-size: 14px;
           color: #434A54;
           padding: 10px 0 0px 40px;
         }
+        
       }
     }
     &_form {
       background-color: lightgray;
       height: 90px;
+      display: flex;
+      position: relative;
       &_message{
         display: block;
         background-color: white;
         height: 50px;
-        width: 550px;
-        position: absolute;
-        bottom: 14px;
-        right: 160px;
+        width: 75%;
         color: gray;
         line-height: 50px;
         padding-left:20px;
+        position: absolute;
+        left:20px;
+        top: 20px;
       }
       &_send-btn {
         background-color: #38AEF0;
         height: 50px;
         width: 90px;
-        position: absolute;
-        right: 40px;
-        bottom: 14px;
         display:block;
         color: white;
         text-align:center;
         line-height: 50px;
+        position: absolute;
+        right: 40px;
+        top: 20px;
       }
     }
     
@@ -131,13 +139,18 @@
 
 }
 
-.fas.fa-cog{
+.fa-cog{
   position:absolute;
   top:70px;
   left:270px;
 }
-.far.fa-edit{
+.fa-edit{
   position:absolute;
   top: 70px;
   left: 240px;
+}
+.fa-images {
+  float:right;
+  padding-top:17px;
+  padding-right:20px;
 }
