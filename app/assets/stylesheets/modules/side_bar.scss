@@ -1,0 +1,62 @@
+.side-bar {
+  box-sizing: border-box;
+  color: $white;
+  
+  .header {
+    width: 300px;
+    background-color: $side_blue_dark;
+    height: 110px;
+    line-height: 100px;
+    &__name {
+      display: inline-block;
+      //font-size: $side_header_font;
+      font-weight: bold;
+      position:absolute;
+      top:5px;
+      left:30px;
+    }
+    &__lists {
+      display: inline-block;
+      float: right;
+      .list {
+        display: inline-block;
+      }
+      .icon {
+        color: $white;
+        
+      }
+    }
+  }
+
+  .groups {
+    width: 260px;
+    background-color: $side_blue_light;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    overflow: scroll;
+    .group {
+      box-sizing: border-box;
+      padding: 20px 0 40px;
+      &__name {
+        color: $white;
+        //font-size: $side_group_name;
+      }
+      &__message {
+        color: $white;
+        //font-size: $side_group_message;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.fa-pencil-square-o {
+  position:absolute;
+  top:50px;
+  left:245px;
+}
+.fa.fa-cog {
+  position:absolute;
+  top:50px;
+  left:270px;
+}
