@@ -45,7 +45,7 @@
     float: right;
     height: calc(100vh - 20px);
     &_top {
-      height: 100px;
+      height: 110px;
       display: flex;
       &_group {
 
@@ -66,14 +66,15 @@
         padding:5px 20px;
         display:inline-block;
         position: absolute;
-        top: 55px;
+        top: 50px;
         right: 40px;
       }
     }
 
     &_contents {
       background-color: #eeeeee;
-      height: calc(100vh - 100px - 90px - 26px);
+      height: calc(100vh - 100px - 90px);
+      overflow:scroll;
       &_message {
         &_A {
           display:flex;
@@ -85,7 +86,8 @@
             font-weight: bold;
             color: #434A54;
             padding: 46px 0 0px 40px;
-            width:60px;
+            width:560px;
+            display:flex;
           }
           &_time {
             color: #999999;
@@ -93,7 +95,6 @@
             float: right;
             line-height: 120px;
             width: 200px;
-          
         }   
         &_message-box {
           font-size: 14px;
@@ -112,13 +113,11 @@
         display: block;
         background-color: white;
         height: 50px;
-        width: 75%;
+        width: 79%;
         color: gray;
         line-height: 50px;
         padding-left:20px;
-        position: absolute;
-        left:20px;
-        top: 20px;
+        
       }
       &_send-btn {
         background-color: #38AEF0;
@@ -128,9 +127,7 @@
         color: white;
         text-align:center;
         line-height: 50px;
-        position: absolute;
-        right: 40px;
-        top: 20px;
+        
       }
     }
     
@@ -153,4 +150,32 @@
   float:right;
   padding-top:17px;
   padding-right:20px;
+}
+
+
+.fa-picture-o {
+  position:absolute;
+  bottom:35px;
+  right:190px;
+}
+
+.message[content]{
+  display: block;
+  background-color: white;
+  height: 50px;
+  width: 75%;
+  color: gray;
+  line-height: 50px;
+  padding-left:20px;
+}
+#message_image{
+  height:30px;
+  margin-bottom:20px;
+}
+.chat_main_contents_message_A_username{
+  padding-right:120px;
+}
+.chat_main_contents_message_A_time{
+  font-size:12px;
+  color: #999999;
 }
