@@ -11,7 +11,9 @@
         .chat_main_top_group_group-name
           = @group.name
         .chat_main_top_group_username
-          = current_user.name
+          -@group.users.each do |user|
+            %li.member
+              = user.name
       %li.chat_main_top_edit-btn
         = link_to 'EDIT', edit_group_path(@group)
     .chat_main_contents
