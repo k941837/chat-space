@@ -48,7 +48,6 @@
       height: 110px;
       display: flex;
       &_group {
-
         &_group-name{
           font-size:20px;
           color:#333333;
@@ -58,6 +57,8 @@
           font-size:12px;
           color: #999999;
           padding-left: 40px;
+          display:flex;
+        
         }
       }
       &_edit-btn{
