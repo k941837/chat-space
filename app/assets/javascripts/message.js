@@ -1,8 +1,8 @@
 $(function(){
   function buildPost(message){
-    var image = (message.image.url !== null)? `<img class="message-text__image" src=${message.image.url}>` : "";
+    var image = message.image? `<img class="message-text__image" src="${message.image}">` : "" ;
 
-    var html =  `<div class="message" data-message-id=${message.id}>
+    var html =  `<div class="message" data-message-id="${message.id}">
                   <div class="chat_main_contents_message">
                     <div class="chat_main_contents_message_content">
                       <div class="chat_main_contents_message_username">
@@ -37,6 +37,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      console.table(data)
       var html = buildPost(data);  //変数htmlに代入。
       $('.chat_main_contents').append(html)  //メッセージ内容の追加。
       $('.chat_main_contents').animate({scrollTop: $('.chat_main_contents')[0].scrollHeight});
@@ -66,7 +67,7 @@ $(function(){
           insertHTML = buildPost(message); //メッセージが入ったHTMLを取得
           $('.chat_main_contents').append(insertHTML);//メッセージを追加
         })
-        $('.chat_main_contents_message').animate({scrollTop: $('chat_main_contents')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
+        $('.chat_main_contents_message').animate({scrollTop: $('.chat_main_contents')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
       })
       .fail(function () {
         alert('自動更新に失敗しました');//ダメだったらアラートを出す
