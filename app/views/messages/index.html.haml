@@ -10,7 +10,8 @@
       .chat_main_top_group
         .chat_main_top_group_group-name
           = @group.name
-        .chat_main_top_group_username
+        %ul.chat_main_top_group_username
+          Member:
           -@group.users.each do |user|
             %li.member
               = user.name

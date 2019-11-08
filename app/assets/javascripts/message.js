@@ -3,25 +3,25 @@ $(function(){
     var image = message.image? `<img class="message-text__image" src="${message.image}">` : "" ;
 
     var html =  `<div class="message" data-message-id="${message.id}">
-                  <div class="chat_main_contents_message">
-                    <div class="chat_main_contents_message_content">
+                   <div class="chat_main_contents_message">
+                     <div class="chat_main_contents_message_content">
                       <div class="chat_main_contents_message_username">
                         <div class="chat_main_contents_message_A_username">
-                          ${message.user_name}
-                        <div>
-                        <div class="chat_main_contents_message_A_time">
-                          ${message.created_at}
+                        ${message.user_name}
                         </div>
-                      <div>    
+                        <div class="chat_main_contents_message_A_time">
+                        ${message.created_at}
+                        </div>
+                      </div>
                     </div>
-                  </div>
                   <div class="chat_main_contents_message_message-box">
-                    <p class="lower-message__content">
-                    ${message.content}
-                    </p>
+                     <p class="lower-message__content">
+                     ${message.content}
+                     </p>
+                     ${image}
                   </div>
-                  ${image}
-                </div>`
+                </div>
+              </div>`
     return html;
   }
   $('#new_message').on('submit', function(e){
