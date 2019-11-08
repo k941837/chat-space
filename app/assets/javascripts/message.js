@@ -41,12 +41,17 @@ $(function(){
       var html = buildPost(data);  //変数htmlに代入。
       $('.chat_main_contents').append(html)  //メッセージ内容の追加。
       $('.chat_main_contents').animate({scrollTop: $('.chat_main_contents')[0].scrollHeight},'fast');
-      $('.chat_main_form_send-btn').prop('disabled', false);  //ボタンを連続で使用できるようにする。
+      //$('.chat_main_form_send-btn').prop('disabled', false);  //ボタンを連続で使用できるようにする。
       $("#new_message")[0].reset();
     })
     .fail(function(data){
+      //$('.chat_main_form_send-btn').prop('disabled', false);
+      console.log("ng")
       alert('エラー')
-      $('chat_main_form_send-btn').prop('disabled', false);
+      
+    })
+    .always(function(){
+      $('.chat_main_form_send-btn').prop('disabled', false);
     })
   })
 
