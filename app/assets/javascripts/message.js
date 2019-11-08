@@ -40,7 +40,7 @@ $(function(){
       console.table(data)
       var html = buildPost(data);  //変数htmlに代入。
       $('.chat_main_contents').append(html)  //メッセージ内容の追加。
-      $('.chat_main_contents').animate({scrollTop: $('.chat_main_contents')[0].scrollHeight});
+      $('.chat_main_contents').animate({scrollTop: $('.chat_main_contents')[0].scrollHeight},'fast');
       $('.chat_main_form_send-btn').prop('disabled', false);  //ボタンを連続で使用できるようにする。
       $("#new_message")[0].reset();
     })
@@ -67,7 +67,7 @@ $(function(){
           insertHTML = buildPost(message); //メッセージが入ったHTMLを取得
           $('.chat_main_contents').append(insertHTML);//メッセージを追加
         })
-        $('.chat_main_contents_message').animate({scrollTop: $('.chat_main_contents')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
+        $('.chat_main_contents').animate({scrollTop: $('.chat_main_contents')[0].scrollHeight},'fast');//最新のメッセージが一番下に表示されようにスクロールする。
       })
       .fail(function () {
         alert('自動更新に失敗しました');//ダメだったらアラートを出す
