@@ -16,7 +16,7 @@
             %li.member
               = user.name
       %li.chat_main_top_edit-btn
-        = link_to 'EDIT', edit_group_path(@group)
+        = link_to 'Edit', edit_group_path(@group),class: "edit"
     .chat_main_contents
       = render @messages
         
